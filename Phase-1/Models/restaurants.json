@@ -1,0 +1,113 @@
+[
+    
+    {
+      "id": 1,
+        "restaurant": "punjabi tadka ",
+        "name":"Online order",
+        "price": 100,
+        "city": "Pune",
+        "description":"Stay home and order to doorstrap",
+        "img":"https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*"
+    },
+    {
+        "id": 2,
+        "restaurant": "dosa special ",
+        "name":"cafe",
+        "price": 400,
+        "city": "Mumbai",
+        "description":"view the city's favourite dining venue",
+        "img":"https://images.unsplash.com/photo-1668236543090-82eba5ee5976?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRvc2F8ZW58MHx8MHx8fDA%3D;*,*"
+    },
+    {
+        "id": 3,
+        "restaurant": "rasoi",
+        "name":"Event",
+        "price": 600,
+        "city": "Satara",
+        "description":"Discover india's best event and concerts",
+        "img":"https://lh3.googleusercontent.com/LXcuc7gwCdN3f0j-QPFhLM7oNQ9F85tb62-d9AzfIkNKgn16fIs3PR4h7hEwVd5Z6V9dux2ItA_k7HQN-AdSO2oMFmtZ=w1200-rw;*,*"
+    },
+    {
+        "id": 4,
+        "restaurant": "food plaza",
+        "name":"unique",
+        "price": 600,
+        "city": "Nagpur",
+        "description":"Top trending spots",
+        "img":"https://hips.hearstapps.com/hmg-prod/images/classic-cheese-pizza-recipe-2-64429a0cb408b.jpg?crop=0.6666666666666667xw:1xh;center,top&resize=1200:*"
+    },
+    {
+        "id": 5,
+        "restaurant": "khana khazana",
+        "name":"cafe",
+        "price": 900,
+        "city": "Pune",
+        "description":"Top  spots",
+        "img":"https://static.vecteezy.com/system/resources/thumbnails/023/809/530/small/a-flying-burger-with-all-the-layers-ai-generative-free-photo.jpg"
+    },
+    {
+        "id": 6,
+        "restaurant": "Delhi Durbar",
+        "name":"unique",
+        "price": 800,
+        "city": "Delhi",
+        "description":"Top trending spots",
+        "img":"https://static.vecteezy.com/system/resources/thumbnails/027/536/411/small/delicious-french-fries-on-a-white-background-photo.jpg"
+    },
+    {
+        "id": 7,
+        "restaurant": "Domino's Pizza",
+        "name":"cafe",
+        "price": 900,
+        "city": "Mumbai",
+        "description":"Top  spots",
+        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMZQOMZrKrNeoWiVHpzb4FQGMyiyvAxDrKpA&s"
+    },
+    {
+        "id": 8,
+        "restaurant": "Pepperoni Pizza",
+        "name":"cafe",
+        "price": 900,
+        "city": "Mumbai",
+        "description":"Top  spots",
+        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT49yP8FPsJ6-SSEwow4KeAZA5s1lxmW9MB5Q&s"
+    },
+    {
+        "id": 9,
+        "restaurant": "Veg Burger",
+         "name":"cafe",
+        "price": 900,
+        "city": "Satara",
+        "description":"Top  spots",
+        "img":"https://dinedelicious.in/wp-content/uploads/2020/06/Veggie-Burger-7.jpg"
+    },
+    {
+        "id": 10,
+        "restaurant": "Cheese Burger",
+        "name":"cafe",
+        "price": 900,
+        "city": "Mumbai",
+        "description":"Top  spots",
+        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8L3AbNQIRIrFWLm3a_GjfI_A-I0Qos8ZPcQ&s"
+    },
+    {
+        "id": 11,
+        "restaurant": "Pasta Alfredo",
+        "name":"cafe",
+        "price": 900,
+        "city": "Pune",
+        "description":"Top  spots",
+        "img":"https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2023-06-chicken-alfredo-pasta-reshoot%2Fchicken-alfredo-pasta-2-vertical"
+    },
+    {
+        "id": 12,
+        "restaurant": "Panner",
+        "name":"cafe",
+        "price": 900,
+        "city": "Pune",
+        "description":"Top  spots",
+        "img":"https://myfoodstory.com/wp-content/uploads/2021/07/restaurant-style-paneer-butter-masala-2-500x500.jpg"
+    }
+    
+    
+  ]
