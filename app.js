@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require ("mongoose");
 
 const routes = require('./Phase-1/Routes/index');
 
@@ -16,8 +17,37 @@ app.use((req, res, next) => {
 });
 
 //npm i cors
-app.use('/', routes);
-
-app.listen(port, () => {
-    console.log(`Server is running on ${port}`);
+app.use((req, res, next)=>{
+    res.setHeader('Access-Control-Allow-Origin','*');
+    res.setHeader('Access-Control-Allow-Methods','GET, POST, PUT, DELETE');
+    res.setHeader('Access-Control-Allow-Header','Content-Type, Authorization');
+    next();
 });
+
+//npm i cors
+app.use('/',routes);
+
+
+mongoose.connect(
+    'mongodb://127.0.0.1:27017/local',  // Specify your database name here
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    }
+).then(success => {
+    console.log("✅ MongoDB Connected Successfully");
+
+    app.listen(port, () => {
+        console.log(`Server is running on ${port}`);
+    });
+
+}).catch(error => {
+    console.log("❌ MongoDB Connection Error: " + error);
+});
+
+
+
+
+// app.listen(port, () => {
+//     console.log(`Server is running on ${port}`);
+// });
