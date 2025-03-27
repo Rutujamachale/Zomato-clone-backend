@@ -1,23 +1,16 @@
-const express = require('express');
-const mongoose = require ("mongoose");
-
-
+const express =require('express');
+require('dotenv').config();
+const mongoose = require('mongoose');
 const routes = require('./Phase-1/Routes/index');
 
 const app = express();
 
-const port = 5401;
 
 
-// CORS issue will be solved // manual cors issue fixing
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*'); // http://localhost:3000
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Header', 'Content-Type, Authorization');
-    next();
-});
+const port=process.env.PORT || 5401;
 
-//npm i cors
+
+//CORS issue will be solved  // Manual CORS Issue fixing
 app.use((req, res, next)=>{
     res.setHeader('Access-Control-Allow-Origin','*');
     res.setHeader('Access-Control-Allow-Methods','GET, POST, PUT, DELETE');
@@ -29,38 +22,51 @@ app.use((req, res, next)=>{
 app.use('/',routes);
 
 
-mongoose.connect(
-    'mongodb://127.0.0.1:27017/local',  // Specify your database name here
-    {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    }
-).then(success => {
-    console.log("✅ MongoDB Connected Successfully");
+// mongoose.connect(
+//     'mongodb://127.0.0.1:27017/local',  // Specify your database name here
+//     {
+//         useNewUrlParser: true,
+//         useUnifiedTopology: true
+//     }
+// ).then(success => {
+//     console.log("✅ MongoDB Connected Successfully");
 
-    app.listen(port, () => {
-        console.log(`Server is running on ${port}`);
-    });
+//     app.listen(port, () => {
+//         console.log(`Server is running on ${port}`);
+//     });
 
-}).catch(error => {
-    console.log("❌ MongoDB Connection Error: " + error);
+// }).catch(error => {
+//     console.log("❌ MongoDB Connection Error: " + error);
+// });
+
+
+
+
+
+
+mongoose.connect(process.env.MONGO_URI, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true
+}).then(() => {
+  console.log("✅ Connected to MongoDB");
+}).catch(err => {
+  console.error("❌ MongoDB Connection Error:", err);
 });
 
-
-// // Database Connection
-// mongoose.connect( process.env.MONGO_URI, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-// })
-// .then(() => console.log('✅ MongoDB Connected Successfully'))
-// .catch(err => console.error('❌ MongoDB Connection Error:', err));
-
-// Start Server
-// const PORT = process.env.PORT || 5401;
-// app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+app.get("/", (req, res) => {
+    res.send("Server is running!");
+  });
+  
+  app.listen(5401, () => {
+    console.log(`🚀 Server running on port ${5401}`);
+  });
 
 
 
-// app.listen(port, () => {
+// app.listen(port,()=>{
 //     console.log(`Server is running on ${port}`);
 // });
+
+//https://green-mcob.onrender.com/Products
+//https://green-mcob.onrender.com/Products/Carrot
+//https://green-mcob.onrender.com/getProductsByType/Roots
