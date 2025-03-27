@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require ("mongoose");
+require('dotenv').config();
 
 const routes = require('./Phase-1/Routes/index');
 
@@ -28,23 +29,35 @@ app.use((req, res, next)=>{
 app.use('/',routes);
 
 
-mongoose.connect(
-    'mongodb://127.0.0.1:27017/local',  // Specify your database name here
-    {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    }
-).then(success => {
-    console.log("✅ MongoDB Connected Successfully");
+// mongoose.connect(
+//     'mongodb://127.0.0.1:27017/local',  // Specify your database name here
+//     {
+//         useNewUrlParser: true,
+//         useUnifiedTopology: true
+//     }
+// ).then(success => {
+//     console.log("✅ MongoDB Connected Successfully");
 
-    app.listen(port, () => {
-        console.log(`Server is running on ${port}`);
-    });
+//     app.listen(port, () => {
+//         console.log(`Server is running on ${port}`);
+//     });
 
-}).catch(error => {
-    console.log("❌ MongoDB Connection Error: " + error);
-});
+// }).catch(error => {
+//     console.log("❌ MongoDB Connection Error: " + error);
+// });
 
+
+// Database Connection
+mongoose.connect( process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+.then(() => console.log('✅ MongoDB Connected Successfully'))
+.catch(err => console.error('❌ MongoDB Connection Error:', err));
+
+// Start Server
+const PORT = process.env.PORT || 5401;
+app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 
 
 
